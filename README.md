@@ -11,14 +11,12 @@ The model was trained on the Brain Tumor MRI Dataset from Kaggle:
 
 Images were preprocessed by resizing to 224x224 pixels and normalizing pixel values.
 
-Features
-
 Classifies brain tumors into multiple categories
 Outputs predicted tumor type with confidence score
 Provides educational information about the predicted tumor
 Web interface for users to upload and analyze images interactively
-Model
 
+Features of Website: 
 Architecture: CNN
 Input shape: 224x224 RGB images
 Output: Tumor class probabilities
