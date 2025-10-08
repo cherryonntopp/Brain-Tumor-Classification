@@ -22,4 +22,4 @@ Model
 Architecture: CNN
 Input shape: 224x224 RGB images
 Output: Tumor class probabilities
-Accuracy: 93% on test dataset
+Accuracy: 94% on test dataset
