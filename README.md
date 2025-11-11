@@ -1,4 +1,5 @@
 # Brain-Tumor-Classification
+# BrainScan AI
 Brain Tumor Classification Using Deep Learning
 SPIS Project 2025 Programmer(s): Shana Ibatuan
 
