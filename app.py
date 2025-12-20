@@ -5,6 +5,7 @@ from PIL import Image
 from flask import Flask, render_template, send_from_directory, request, jsonify
 import numpy as np
 from predict import predict_image
+import gradio as gr
 
 app = Flask(__name__, static_url_path='/static', static_folder='static')
 
@@ -43,6 +44,13 @@ def predict_route():
             })
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
+# Gradio for hugging free space 
+def greet(name):
+    return "Hello " + name + "!!"
+
+demo = gr.Interface(fn=greet, inputs="text", outputs="text")
+demo.launch()
     
 
 # Set up a route to serve the model files
