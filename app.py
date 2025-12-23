@@ -36,6 +36,3 @@ demo = gr.Interface(
     title="BrainScan AI",
     description="Upload a brain MRI image to detect tumor type using a deep learning model."
 )
-
-if __name__ == "__main__":
-    demo.launch()
