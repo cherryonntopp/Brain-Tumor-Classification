@@ -11,17 +11,10 @@ model = tf.keras.models.load_model("final_model.keras")
 class_names = ["glioma", "meningioma", "no_tumor", "pituitary"]
 
 def analyze_image(image):
-    """
-    image: PIL Image from Gradio
-    returns: prediction text
-    """
     if image is None:
         return "Please upload an image."
-
     image = image.convert("RGB")
-
     result, confidence, info = predict_image(image)
-
     return (
         f"🧠 Prediction: {result}\n\n"
         f"📊 Confidence: {confidence:.2f}%\n\n"
@@ -36,3 +29,6 @@ demo = gr.Interface(
     title="BrainScan AI",
     description="Upload a brain MRI image to detect tumor type using a deep learning model."
 )
+
+if __name__ == "__main__":
+    demo.launch()
